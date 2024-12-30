@@ -1,0 +1,118 @@
+/* App容器样式 */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+/* Header容器样式 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff; /* 添加背景颜色以提高对比度 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加轻微阴影 */
+  border-radius: 8px; /* 圆角边框 */
+}
+
+/* NFT画廊容器样式 */
+.nft-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 每个NFT项的卡片样式 */
+.listBox {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 0 5px lightgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out; /* 添加悬停效果 */
+}
+
+.listBox:hover {
+  transform: translateY(-3px); /* 卡片悬停时上移 */
+}
+
+.listBox .listImg {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.listBox .listImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* 继承父元素的圆角 */
+}
+
+.listBox .listTitle {
+  padding: 5px 10px;
+  height: 40px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333; /* 更深的文字颜色 */
+  background-color: #f9f9f9; /* 背景颜色 */
+  border-bottom: 1px solid #ddd; /* 底部分隔线 */
+}
+
+.listBox .listRemark {
+  padding: 5px 10px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #555; /* 文字颜色 */
+  background-color: #fafafa; /* 背景颜色 */
+}
+
+.listBox .listBtnBox {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f6f9; /* 背景颜色 */
+  border-top: 1px solid #ddd; /* 顶部分隔线 */
+}
+
+.listBox .listBtnBox button {
+  height: 35px;
+  width: 80%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* 按钮悬停效果 */
+}
+
+.listBox .listBtnBox button:hover {
+  background-color: #0056b3; /* 悬停时按钮背景颜色 */
+}
+
+.listBox .listBtnBox button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed; /* 禁用状态光标 */
+}
